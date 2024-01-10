@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Backjun Image</title>
+
+    <style>
+        .image-container {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <!-- 이미지를 표시하는 부분 -->
+    <img th:src="@{/image/1.png}" alt="Your Image1">
+</div>
+<div class="image-container">
+    <img th:src="@{/image/2.png}" alt="Your Image2">
+</div>
+
+</body>
+</html>

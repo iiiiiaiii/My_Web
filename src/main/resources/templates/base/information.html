@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>개인 정보</title>
+  <style>
+    .image-container {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: 50%;
+        height: auto;
+        display: block;
+    }
+  </style>
+</head>
+<body>
+<h1>개인 정보</h1>
+
+<div class="image-container">
+  <img th:src="@{/image/picture.jpg}" alt="myFace">
+</div>
+  <label>이름:</label>
+  <span th:text="${name}"></span>
+</div>
+
+<div>
+<label>생일:</label>
+<span th:text="${birth}"></span>
+</div>
+
+<div>
+  <label>나이:</label>
+  <span th:text="${age}"></span>
+</div>
+
+<div>
+  <label>학력:</label>
+  <ul>
+    <li>학교: <span th:text="${university}"></span></li>
+    <li>전공: <span th:text="${major}"></span></li>
+    <li>부전공: <span th:text="${minor}"></span></li>
+  </ul>
+</div>
+</body>
+</html>
